@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/BrentAGit/CookingBuddy.git/static/css/main.8afbb36c.chunk.css",
-    "main.js": "/BrentAGit/CookingBuddy.git/static/js/main.52f20325.chunk.js",
-    "main.js.map": "/BrentAGit/CookingBuddy.git/static/js/main.52f20325.chunk.js.map",
-    "runtime-main.js": "/BrentAGit/CookingBuddy.git/static/js/runtime-main.c05d1867.js",
-    "runtime-main.js.map": "/BrentAGit/CookingBuddy.git/static/js/runtime-main.c05d1867.js.map",
-    "static/js/2.8f332bf3.chunk.js": "/BrentAGit/CookingBuddy.git/static/js/2.8f332bf3.chunk.js",
-    "static/js/2.8f332bf3.chunk.js.map": "/BrentAGit/CookingBuddy.git/static/js/2.8f332bf3.chunk.js.map",
-    "index.html": "/BrentAGit/CookingBuddy.git/index.html",
-    "precache-manifest.1560a1eb39da61b77b36ccd3ccbdb90b.js": "/BrentAGit/CookingBuddy.git/precache-manifest.1560a1eb39da61b77b36ccd3ccbdb90b.js",
-    "service-worker.js": "/BrentAGit/CookingBuddy.git/service-worker.js",
-    "static/css/main.8afbb36c.chunk.css.map": "/BrentAGit/CookingBuddy.git/static/css/main.8afbb36c.chunk.css.map",
-    "static/js/2.8f332bf3.chunk.js.LICENSE.txt": "/BrentAGit/CookingBuddy.git/static/js/2.8f332bf3.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/BrentAGit/CookingBuddy.git/static/media/BackgroundImage.10962b42.jpg",
-    "static/media/logo.svg": "/BrentAGit/CookingBuddy.git/static/media/logo.5d5d9eef.svg"
+    "main.css": "/CookingBuddy/static/css/main.6bc75283.chunk.css",
+    "main.js": "/CookingBuddy/static/js/main.2ef4ab87.chunk.js",
+    "main.js.map": "/CookingBuddy/static/js/main.2ef4ab87.chunk.js.map",
+    "runtime-main.js": "/CookingBuddy/static/js/runtime-main.f7d90266.js",
+    "runtime-main.js.map": "/CookingBuddy/static/js/runtime-main.f7d90266.js.map",
+    "static/js/2.8f332bf3.chunk.js": "/CookingBuddy/static/js/2.8f332bf3.chunk.js",
+    "static/js/2.8f332bf3.chunk.js.map": "/CookingBuddy/static/js/2.8f332bf3.chunk.js.map",
+    "index.html": "/CookingBuddy/index.html",
+    "precache-manifest.b60c81049ea0b7d78e121122af9e6151.js": "/CookingBuddy/precache-manifest.b60c81049ea0b7d78e121122af9e6151.js",
+    "service-worker.js": "/CookingBuddy/service-worker.js",
+    "static/css/main.6bc75283.chunk.css.map": "/CookingBuddy/static/css/main.6bc75283.chunk.css.map",
+    "static/js/2.8f332bf3.chunk.js.LICENSE.txt": "/CookingBuddy/static/js/2.8f332bf3.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/CookingBuddy/static/media/BackgroundImage.10962b42.jpg",
+    "static/media/logo.svg": "/CookingBuddy/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c05d1867.js",
+    "static/js/runtime-main.f7d90266.js",
     "static/js/2.8f332bf3.chunk.js",
-    "static/css/main.8afbb36c.chunk.css",
-    "static/js/main.52f20325.chunk.js"
+    "static/css/main.6bc75283.chunk.css",
+    "static/js/main.2ef4ab87.chunk.js"
   ]
 }
