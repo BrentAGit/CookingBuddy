@@ -6,13 +6,13 @@ const StyledRecipeName = styled.h2`
 margin-left: 10px;
 `;
 
-export default function RecipeCard(props){
+export default function RecipeCard(props) {
 
     const [showRecipe, setShowRecipe] = useState(false)
 
     const {recipe} = props
 
-    return(
+    return (
         <div onClick={() =>
             setShowRecipe(!showRecipe)
         }>

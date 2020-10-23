@@ -6,9 +6,9 @@ margin-left: 10px;
 `;
 
 export default function RecipeDesc(props) {
-return(
-    <StyledRecipeDescription>
-        {props.children}
-    </StyledRecipeDescription>
-)
+    return (
+        <StyledRecipeDescription>
+            {props.children}
+        </StyledRecipeDescription>
+    )
 }

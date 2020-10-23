@@ -7,15 +7,15 @@ import Category from "./Components/categories";
 import categories from "./Data/data.js";
 
 function App() {
-  return (
-   <div>
-       <Navbar />
-       <SearchCategory categories={categories} />
-       {categories.map(function (category, index) {
-            return <Category name={category.name} recipes={category.recipes} key={index} />
-       })}
-   </div>
-  );
+    return (
+        <div>
+            <Navbar/>
+            <SearchCategory categories={categories}/>
+            {categories.map(function (category, index) {
+                return <Category name={category.name} recipes={category.recipes} key={index}/>
+            })}
+        </div>
+    );
 }
 
 export default App;

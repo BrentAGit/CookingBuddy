@@ -18,8 +18,8 @@ const StyledA = styled.a`
   font-family: Sansita Swashed;
 `;
 
-export default function Navbar(){
-    return(
+export default function Navbar() {
+    return (
         <StyledNavBar name="top">
             <StyledA href="#top">Cooking Buddy</StyledA>
         </StyledNavBar>
