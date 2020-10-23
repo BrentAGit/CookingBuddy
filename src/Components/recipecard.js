@@ -13,9 +13,9 @@ export default function RecipeCard(props){
     const {recipe} = props
 
     return(
-        <div onClick={function () {
+        <div onClick={() =>
             setShowRecipe(!showRecipe)
-        }}>
+        }>
             <StyledRecipeName>
                 {recipe.name}
             </StyledRecipeName>
