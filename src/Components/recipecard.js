@@ -2,19 +2,23 @@ import React, {useState} from 'react';
 import styled from "@emotion/styled";
 import RecipeDesc from "./recipedescription";
 
+const StyledRecipeName = styled.h2`
+margin-left: 10px;
+`;
+
 export default function RecipeCard(props){
 
-    const [isClicked, changeClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState(false)
 
     const {recipe} = props
 
     return(
         <div onClick={function () {
-            changeClicked(!isClicked)
+            setIsClicked(!isClicked)
         }}>
-            <h2>
+            <StyledRecipeName>
                 {recipe.name}
-            </h2>
+            </StyledRecipeName>
             {isClicked && <RecipeDesc>
                 {recipe.description}
             </RecipeDesc>}

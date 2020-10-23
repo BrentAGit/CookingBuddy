@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import logo from './logo.svg';
 import './App.css';
 import Navbar from "./Components/navbar";
 import SearchCategory from "./Components/searchcategories";

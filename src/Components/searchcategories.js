@@ -12,7 +12,7 @@ padding-bottom: 46vh;
 
 const StyledDiv = styled.div`
 background-color: #282c34;
-width: 20%; 
+width: 20%;
 `;
 
 export default function SearchCategory(prop) {
