@@ -8,18 +8,18 @@ margin-left: 10px;
 
 export default function RecipeCard(props){
 
-    const [isClicked, setIsClicked] = useState(false)
+    const [showRecipe, setShowRecipe] = useState(false)
 
     const {recipe} = props
 
     return(
         <div onClick={function () {
-            setIsClicked(!isClicked)
+            setShowRecipe(!showRecipe)
         }}>
             <StyledRecipeName>
                 {recipe.name}
             </StyledRecipeName>
-            {isClicked && <RecipeDesc>
+            {showRecipe && <RecipeDesc>
                 {recipe.description}
             </RecipeDesc>}
         </div>
