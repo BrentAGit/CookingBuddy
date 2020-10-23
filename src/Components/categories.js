@@ -17,7 +17,7 @@ padding-top: 10px;
 
 export default function Category(props) {
 
-    const {recipes, name} = props
+    const {recipes, name, id} = props
 
     return (
         <StyledCategory>
