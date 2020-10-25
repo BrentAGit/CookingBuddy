@@ -3,10 +3,10 @@ import styled from "@emotion/styled";
 import Recipecard from "./recipecard";
 
 const StyledCategory = styled.div`
-background-color: #282c34;
+background-color: ${(props) => props.theme.colors.darkGrey};
 width: 100%; 
 margin-top: 10vh;
-color: #ffffff;
+color: ${(props) => props.theme.colors.primaryWhite};
 padding-bottom: 7px;
 `;
 

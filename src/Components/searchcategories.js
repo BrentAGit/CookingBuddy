@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "@emotion/styled";
 
 const StyledSearchBar = styled.div`
-color: #ffffff;
+color: ${(props) => props.theme.colors.primaryWhite};
 margin-top: 95px;
 display: flex;
 justify-content: space-around;
@@ -11,7 +11,7 @@ padding-bottom: 46vh;
 `;
 
 const StyledDiv = styled.div`
-background-color: #282c34;
+background-color: ${(props) => props.theme.colors.darkGrey};
 width: 20%;
 `;
 

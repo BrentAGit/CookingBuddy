@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const StyledNavBar = styled.nav`
   overflow: hidden;
-  background-color: #000000;
+  background-color: ${(props) => props.theme.colors.primaryDark};
   position: fixed; 
   top: 0;
   width: 100%; 
@@ -13,7 +13,7 @@ const StyledNavBar = styled.nav`
 
 const StyledA = styled.a`
   text-decoration: none;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.colors.primaryWhite};
   font-size: 4em;
   font-family: Sansita Swashed;
 `;
