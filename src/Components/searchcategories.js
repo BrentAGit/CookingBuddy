@@ -15,6 +15,11 @@ background-color: ${(props) => props.theme.colors.darkGrey};
 width: 20%;
 `;
 
+const StyledA = styled.a`
+text-decoration: none;
+color: inherit; 
+`;
+
 export default function SearchCategory(prop) {
 
     const {categories} = prop;
@@ -23,10 +28,12 @@ export default function SearchCategory(prop) {
         <StyledSearchBar id="searchBar">
             {categories.map(function (category, index) {
                 return (
-                    <StyledDiv key={index} onClick={() =>
+                    <StyledDiv key={index}  onClick={() =>
                         console.log(category.name)
                     }>
+                        <StyledA href={`#${category.name}`}>
                         <h1>{category.name}</h1>
+                    </StyledA>
                     </StyledDiv>
                 )
             })}

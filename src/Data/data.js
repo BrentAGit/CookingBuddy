@@ -29,7 +29,7 @@ export default [
     {
         name: "Pasta",
         id: 4,
-        recipes: [{name: "Spaghetti Bolognese", description: "A hot bowl of spaghetti swimming in a bolognese sauce."},
+        recipes: [{name: "Spaghetti Bolognese", description: "A hot bowl of spaghetti swimming in a robust bolognese sauce."},
             {name: "Lasagna", description: "Thinly rolled pasta with multiple layers of delicious sauce and cheese."},
             {name: "Macaroni and cheese", description: "Soft macaroni swimming in a pool of hot and melted cheese."},
             {name: "Tagliatelle", description: "Another italian way of making a perfect bowl of pasta."}]
