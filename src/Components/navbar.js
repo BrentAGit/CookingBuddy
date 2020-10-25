@@ -9,6 +9,7 @@ const StyledNavBar = styled.nav`
   width: 100%; 
   height: 95px;
   text-align: center;
+  transition: top 0.2s;
     `;
 
 const StyledA = styled.a`
@@ -19,8 +20,19 @@ const StyledA = styled.a`
 `;
 
 export default function Navbar() {
+    let prevScrollpos = window.pageYOffset; // Make navbar retract when scrolling down
+     window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = `-${currentScrollPos}px`;
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
     return (
-        <StyledNavBar name="top">
+        <StyledNavBar id="navbar" name="top">
             <StyledA href="#top">Cooking Buddy</StyledA>
         </StyledNavBar>
     )
