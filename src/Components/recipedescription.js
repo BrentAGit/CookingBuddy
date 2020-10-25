@@ -8,6 +8,9 @@ margin-left: 10px;
 export default function RecipeDesc(props) {
     return (
         <StyledRecipeDescription>
+            <button>
+                Recipe
+            </button>
             {props.children}
         </StyledRecipeDescription>
     )
