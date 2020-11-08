@@ -1,4 +1,4 @@
-export default [
+const categories = [
     {
         name: "Beef",
         id: 1,
@@ -44,3 +44,5 @@ export default [
             {name: "Cauliflower & roast potato's", description: "A delicious combination of cauliflower and roast potato's."}]
     },
 ]
+
+export default categories;

@@ -14,7 +14,7 @@ function App() {
             <ThemeProvider theme={theme}>
             <Navbar/>
             <SearchCategory categories={categories}/>
-            {categories.map(function (category, index) {
+            {categories.map((category, index) =>{
                 return <Category name={category.name} recipes={category.recipes} key={index}/>
             })}
             </ThemeProvider>

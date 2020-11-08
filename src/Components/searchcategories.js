@@ -20,18 +20,18 @@ text-decoration: none;
 color: inherit; 
 `;
 
-export default function SearchCategory(prop) {
+export default function SearchCategory(props) {
 
-    const {categories} = prop;
+    const {categories} = props;
 
     return (
-        <StyledSearchBar id="searchBar">
-            {categories.map(function (category, index) {
+        <StyledSearchBar>
+            {categories.map((category, index) => {
                 return (
                     <StyledDiv key={index}>
                         <StyledA href={`#${category.name}`}>
-                        <h1>{category.name}</h1>
-                    </StyledA>
+                            <h1>{category.name}</h1>
+                        </StyledA>
                     </StyledDiv>
                 )
             })}
