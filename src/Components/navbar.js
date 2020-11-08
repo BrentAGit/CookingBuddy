@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import catData from "../Data/data";
+import SearchCategory from "./searchcategories";
 
 const StyledNavBar = styled.nav`
   overflow: hidden;
@@ -32,8 +34,11 @@ export default function Navbar() {
     }
 
     return (
+        <div>
         <StyledNavBar id="navbar" name="top">
             <StyledA href="#top">Cooking Buddy</StyledA>
         </StyledNavBar>
+        <SearchCategory categories={catData}/>
+        </div>
     )
 }

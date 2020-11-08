@@ -26,9 +26,9 @@ export default function SearchCategory(props) {
 
     return (
         <StyledSearchBar>
-            {categories.map((category, index) => {
+            {categories.map((category) => {
                 return (
-                    <StyledDiv key={index}>
+                    <StyledDiv>
                         <StyledA href={`#${category.name}`}>
                             <h1>{category.name}</h1>
                         </StyledA>

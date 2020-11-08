@@ -1,4 +1,4 @@
-const categories = [
+const catData = [
     {
         name: "Beef",
         id: 1,
@@ -45,4 +45,4 @@ const categories = [
     },
 ]
 
-export default categories;
+export default catData;

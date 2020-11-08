@@ -17,10 +17,10 @@ padding-top: 10px;
 
 export default function Category(props) {
 
-    const {recipes, name, id} = props
+    const {recipes, name} = props
 
     return (
-        <StyledCategory id={name}>
+        <StyledCategory>
             <StyledCatTitle>
                 {name}
             </StyledCatTitle>
