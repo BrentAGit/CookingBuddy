@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-import Navbar from "./Components/UI/navbar";
-import Category from "./Components/Main Page Content/categories";
-import catData from "./Data/data";
+import {Navbar} from "./Components/UI/navbar";
 import {ThemeProvider} from "emotion-theming";
 import {theme} from "./theme";
 import {ActiveRecipeInfoProvider} from "./Context/activeRecipeInfo_context";

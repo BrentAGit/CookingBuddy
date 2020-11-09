@@ -21,7 +21,7 @@ const StyledA = styled.a`
   font-family: Sansita Swashed;
 `;
 
-export default function Navbar() {
+export function Navbar() {
     let prevScrollpos = window.pageYOffset; // Make navbar retract when scrolling down
      window.onscroll = function() {
         let currentScrollPos = window.pageYOffset;
