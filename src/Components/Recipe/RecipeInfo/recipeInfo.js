@@ -12,9 +12,8 @@ const StyledRecipeInfo = styled.div`
   left: 0;
   background-color: ${(props) => props.theme.colors.darkGrey2}; 
   overflow-x: hidden;
-  border-style: solid;
-  border-color: ${(props) => props.theme.colors.primaryDark};
-  border-width: 10px; 
+  border-left: 10px solid ${(props) => props.theme.colors.primaryDark};
+  border-right: 10px solid ${(props) => props.theme.colors.primaryDark};
 `;
 
 const StyledCloseInfoButton = styled.div`
@@ -24,7 +23,7 @@ const StyledCloseInfoButton = styled.div`
   display: table;
 `
 
-export default function RecipeInfo(props) {
+export default function RecipeInfo() {
 
     const {showRecipeInfo, setShowRecipeInfo} = useActiveRecipeInfoContext();
 
