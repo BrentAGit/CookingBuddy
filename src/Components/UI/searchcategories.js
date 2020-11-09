@@ -13,6 +13,8 @@ padding-bottom: 46vh;
 const StyledDiv = styled.div`
 background-color: ${(props) => props.theme.colors.darkGrey};
 width: 20%;
+border-bottom: 5px solid ${(props) => props.theme.colors.primaryDark};
+border-right: 5px solid ${(props) => props.theme.colors.primaryDark};
 &:hover {
         background-color: ${(props) => props.theme.colors.primaryDark2};
 `;

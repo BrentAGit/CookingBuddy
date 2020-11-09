@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "@emotion/styled";
 
 const StyledDiv = styled.div`
-padding-top: 15px;
+padding-top: 20px;
 `
 
 const StyledImage = styled.img`

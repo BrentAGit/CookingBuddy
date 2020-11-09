@@ -15,9 +15,9 @@ position: relative;
 float: left;
 top: 0;
 width: 50%; 
-height: 95px;
+height: 90px;
 text-align: center;
-border-bottom: 3px solid ${(props) => props.theme.colors.primaryDark};
+border-bottom: 5px solid ${(props) => props.theme.colors.primaryDark};
 &:hover {
         background-color: ${(props) => props.theme.colors.primaryDark2};
 `;

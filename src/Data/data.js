@@ -46,7 +46,7 @@ const catData = [
 
                     {name: "Hamburger",
                      description: "A thick, restaurant styled burger with whatever toppings you like.",
-                     info: "test",
+                     info: "No more dry, lackluster burgers. These are juicy, and spices can be easily added or changed to suit anyone's taste. Baste frequently with your favorite barbeque sauce. If you find the meat mixture too mushy, just add more bread crumbs until it forms patties that hold their shape.",
                      time: "18 Mins",
                      ingredients: [ "1 tablespoon light mayonnaise",
                                      "2 teaspoons prepared horseradish",
