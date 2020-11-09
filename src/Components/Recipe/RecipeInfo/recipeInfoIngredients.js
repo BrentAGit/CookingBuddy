@@ -29,8 +29,8 @@ export function RecipeInfoIngredients(props)  {
     return(
         <StyledDiv>
             <StyledUnorderedList>
-            {ingredients.map((ingredientsList) =>{
-                return <StyledList>
+            {ingredients.map((ingredientsList, index) =>{
+                return <StyledList key={index}>
                     <CheckBox type="checkbox"/>
                     {ingredientsList}
                 </StyledList>

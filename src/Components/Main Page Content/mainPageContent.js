@@ -5,8 +5,8 @@ import Category from "./categories";
 export function MainPageContent() {
     return(
         <div>
-        {catData.map((category) =>{
-                return <Category name={category.name} recipes={category.recipes}/>
+        {catData.map((category, index) =>{
+                return <Category name={category.name} recipes={category.recipes} key={index}/>
             })}
         </div>
     )

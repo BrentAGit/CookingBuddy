@@ -24,9 +24,9 @@ export default function Category(props) {
             <StyledCatTitle>
                 {name}
             </StyledCatTitle>
-            {recipes.map((recipe) =>{
+            {recipes.map((recipe, index) =>{
                 return (
-                    <Recipecard recipe={recipe}/>
+                    <Recipecard recipe={recipe} key={index}/>
                 )
             })}
         </StyledCategory>

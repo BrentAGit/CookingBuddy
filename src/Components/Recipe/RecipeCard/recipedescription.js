@@ -19,7 +19,6 @@ export default function RecipeDesc(props) {
     const {showRecipeInfo, setShowRecipeInfo} = useActiveRecipeInfoContext();
     const {isActive} = showRecipeInfo;
     const {ingredients, info, img} = props;
-    console.log(info);
 
     return (
         <StyledRecipeDescription>
