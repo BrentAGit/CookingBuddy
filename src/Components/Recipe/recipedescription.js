@@ -22,7 +22,7 @@ export default function RecipeDesc(props) {
         <StyledRecipeDescription>
             {props.children}
             <StyledRecipeButton onClick={() =>
-                setShowRecipeInfo}>
+                setShowRecipeInfo(!showRecipeInfo)}>
                 Recipe
             </StyledRecipeButton>
             {showRecipeInfo && <RecipeInfo/>}

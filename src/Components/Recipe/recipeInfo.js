@@ -11,16 +11,24 @@ const StyledRecipeInfo = styled.div`
   left: 0;
   background-color: ${(props) => props.theme.colors.lightGrey}; 
   overflow-x: hidden; 
-  padding-top: 60px; 
-  transition: width 2s;
+  transition: all 2s linear;
 `;
+
+const StyledCloseInfoButton = styled.div`
+  margin-top: 15px;
+  background-color: ${(props) => props.theme.colors.darkGrey};
+  font-weight: bold;
+  display: table;
+`
 
 export default function RecipeInfo(props) {
 
     const {setShowRecipeInfo} = useActiveRecipeInfoContext();
 
-    return <StyledRecipeInfo onClick={() =>
-        setShowRecipeInfo}>
-        aaaaaaaaaaaaaaaaaa
+    return <StyledRecipeInfo>
+        <StyledCloseInfoButton  onClick={() =>
+            setShowRecipeInfo(!setShowRecipeInfo)}>
+            Close
+            </StyledCloseInfoButton>
     </StyledRecipeInfo>
 }
