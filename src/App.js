@@ -6,19 +6,24 @@ import catData from "./Data/data";
 import {ThemeProvider} from "emotion-theming";
 import {theme} from "./theme";
 import {ActiveRecipeInfoProvider} from "./Context/activeRecipeInfo_context";
+import {MainPageContent} from "./Components/Main Page Content/mainPageContent"
+
+function ProvidedApp() {
+    return (
+        <div>
+                <Navbar/>
+                <MainPageContent/>
+        </div>
+    );
+}
 
 function App() {
     return (
-        <div>
             <ActiveRecipeInfoProvider>
-            <ThemeProvider theme={theme}>
-                <Navbar/>
-                {catData.map((category) =>{
-                    return <Category name={category.name} recipes={category.recipes}/>
-                })}
-            </ThemeProvider>
+                <ThemeProvider theme={theme}>
+                    <ProvidedApp/>
+                </ThemeProvider>
             </ActiveRecipeInfoProvider>
-        </div>
     );
 }
 
