@@ -26,7 +26,7 @@ const catData = [
                                     "1 teaspoon cracked black pepper",
                                     "1/2 teaspoon cumin",
                                     "2 tablespoons olive oil"],
-                    img: "../Images/RibsImage.jpg"
+                    img: "RecipeImage/RibsImage.jpg"
                     },
 
                     {name: "Beef Sandwich",
@@ -41,7 +41,7 @@ const catData = [
                                      "3 ounces thinly sliced deli roast beef",
                                      "2 (1/4-inch-thick) slices tomato",
                                      "1 (1/8-inch-thick) slice red onion, separated into rings"],
-                    img: "../Images/SteakSandwichImage.jpg"
+                    img: "RecipeImage/SteakSandwichImage.jpg"
                     },
 
                     {name: "Hamburger",
@@ -56,7 +56,7 @@ const catData = [
                                      "3 ounces thinly sliced deli roast beef",
                                      "2 (1/4-inch-thick) slices tomato",
                                      "1 (1/8-inch-thick) slice red onion, separated into rings"],
-                    img: "../Images/HamburgerImage.jpg"
+                    img: "RecipeImage/HamburgerImage.jpg"
                     }]
     },
 
