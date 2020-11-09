@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Recipecard from "./recipecard";
+import Recipecard from "../Recipe/recipecard";
 
 const StyledCategory = styled.div`
 background-color: ${(props) => props.theme.colors.darkGrey};
@@ -24,9 +24,9 @@ export default function Category(props) {
             <StyledCatTitle>
                 {name}
             </StyledCatTitle>
-            {recipes.map((recipe, index) =>{
+            {recipes.map((recipe) =>{
                 return (
-                    <Recipecard recipe={recipe} key={index}/>
+                    <Recipecard recipe={recipe}/>
                 )
             })}
         </StyledCategory>

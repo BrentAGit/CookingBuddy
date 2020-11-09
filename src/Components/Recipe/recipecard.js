@@ -13,12 +13,14 @@ export default function RecipeCard(props) {
     const {recipe} = props
 
     return (
-        <div onClick={() =>
-            setShowRecipe(!showRecipe)
-        }>
-            <StyledRecipeName>
-                {recipe.name}
-            </StyledRecipeName>
+        <div>
+            <div onClick={() =>
+                setShowRecipe(!showRecipe)
+            }>
+                <StyledRecipeName>
+                    {recipe.name}
+                </StyledRecipeName>
+            </div>
             {showRecipe && <RecipeDesc>
                 {recipe.description}
             </RecipeDesc>}

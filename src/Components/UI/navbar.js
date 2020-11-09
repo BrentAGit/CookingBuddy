@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import catData from "../Data/data";
+import catData from "../../Data/data";
 import SearchCategory from "./searchcategories";
 
 const StyledNavBar = styled.nav`
