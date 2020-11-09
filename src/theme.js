@@ -3,7 +3,7 @@ const colors = {
     primaryWhite: '#FFFFFF',
     darkGrey: '#282c34',
     darkGrey2: '#292929',
-    primaryDark2: '#202020'
+    primaryDark2: '#303030'
 };
 
 export const theme = {

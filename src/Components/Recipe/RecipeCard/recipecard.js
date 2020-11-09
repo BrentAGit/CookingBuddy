@@ -21,7 +21,7 @@ export default function RecipeCard(props) {
                     {recipe.name}
                 </StyledRecipeName>
             </div>
-            {showRecipe && <RecipeDesc>
+            {showRecipe && <RecipeDesc ingredients={recipe.ingredients} info={recipe.info} img={recipe.img}>
                 {recipe.description}
             </RecipeDesc>}
         </div>

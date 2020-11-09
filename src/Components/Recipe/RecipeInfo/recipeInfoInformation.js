@@ -1,8 +1,28 @@
 import React from 'react';
 import styled from "@emotion/styled";
 
-export function RecipeInfoInformation()  {
+const StyledInformation = styled.div`
+font-size: 1.5em;
+font-family: Sansita Swashed;
+text-align: center;
+padding-top: 100px;
+`
+
+const StyledImage = styled.img`
+width: 100%;
+length: 100%;
+`
+
+export function RecipeInfoInformation(props)  {
+
+    const {info, img} =  props;
+
     return(
-        <div>test 1 pee pee poo poo</div>
+        <div>
+        <StyledInformation>
+            {info}
+        </StyledInformation>
+            <StyledImage src={img}/>
+        </div>
     )
 }

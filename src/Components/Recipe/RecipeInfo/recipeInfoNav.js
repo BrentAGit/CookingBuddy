@@ -4,7 +4,7 @@ import {useActiveRecipeInfoInformationContext} from "../../../Context/activeReci
 import {useActiveRecipeInfoIngredientsContext} from "../../../Context/activeRecipeInfo_Ingredients_context";
 import {RecipeInfoInformation} from "./recipeInfoInformation";
 import {RecipeInfoIngredients} from "./recipeInfoIngredients";
-import RecipeDesc from "../RecipeCard/recipedescription";
+import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 
 const StyledInfoNavBar = styled.div`
 background-color:  ${(props) => props.theme.colors.darkGrey};
@@ -34,6 +34,7 @@ export function RecipeInfoNav() {
 
     const {showRecipeInfoInformation, setShowRecipeInfoInformation} = useActiveRecipeInfoInformationContext();
     const {showRecipeInfoIngredients, setShowRecipeInfoIngredients} = useActiveRecipeInfoIngredientsContext();
+    const {showRecipeInfo} = useActiveRecipeInfoContext();
 
     return(
         <div>
@@ -57,8 +58,8 @@ export function RecipeInfoNav() {
                 Ingredients
             </StyledNavCatText>
         </StyledInfoNavBar>
-            {showRecipeInfoInformation && <RecipeInfoInformation/>}
-            {showRecipeInfoIngredients && <RecipeInfoIngredients/>}
+            {showRecipeInfoInformation && <RecipeInfoInformation info={showRecipeInfo.info} img={showRecipeInfo.img}/>}
+            {showRecipeInfoIngredients && <RecipeInfoIngredients ingredients={showRecipeInfo.ingredients}/>}
         </div>
     )
 }

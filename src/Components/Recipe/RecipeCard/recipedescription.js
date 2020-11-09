@@ -17,15 +17,18 @@ display: table;
 export default function RecipeDesc(props) {
 
     const {showRecipeInfo, setShowRecipeInfo} = useActiveRecipeInfoContext();
+    const {isActive} = showRecipeInfo;
+    const {ingredients, info, img} = props;
+    console.log(info);
 
     return (
         <StyledRecipeDescription>
             {props.children}
             <StyledRecipeButton onClick={() =>
-                setShowRecipeInfo(!showRecipeInfo)}>
+                setShowRecipeInfo({isActive:!isActive, ingredients:ingredients, info:info, img:img})}>
                 Recipe
             </StyledRecipeButton>
-            {showRecipeInfo && <RecipeInfo/>}
+            {isActive && <RecipeInfo/>}
         </StyledRecipeDescription>
     )
 }

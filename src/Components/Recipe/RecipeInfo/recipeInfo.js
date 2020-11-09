@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
+import {RecipeCloseButton} from "./recipeCloseButton";
 import {RecipeInfoNav} from "./recipeInfoNav";
+import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 
 const StyledRecipeInfo = styled.div`
   height: 100%; 
@@ -12,26 +13,17 @@ const StyledRecipeInfo = styled.div`
   left: 0;
   background-color: ${(props) => props.theme.colors.darkGrey2}; 
   overflow-x: hidden;
-  border-left: 10px solid ${(props) => props.theme.colors.primaryDark};
   border-right: 10px solid ${(props) => props.theme.colors.primaryDark};
+  transition: width 2s;
 `;
-
-const StyledCloseInfoButton = styled.div`
-  margin-top: 15px;
-  background-color: ${(props) => props.theme.colors.darkGrey};
-  font-weight: bold;
-  display: table;
-`
 
 export default function RecipeInfo() {
 
-    const {showRecipeInfo, setShowRecipeInfo} = useActiveRecipeInfoContext();
+    const {showRecipeInfo} = useActiveRecipeInfoContext();
 
-    return <StyledRecipeInfo>
-        <RecipeInfoNav/>
-        <StyledCloseInfoButton  onClick={() =>
-            setShowRecipeInfo(!showRecipeInfo)}>
-            Close
-            </StyledCloseInfoButton>
-    </StyledRecipeInfo>
+    return(
+        <StyledRecipeInfo>
+            <RecipeInfoNav ingredients={showRecipeInfo.ingredients} info={showRecipeInfo.info} img={showRecipeInfo.img}/>
+            <RecipeCloseButton/>
+        </StyledRecipeInfo>)
 }
