@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import Recipecard from "../Recipe/recipecard";
+import Recipecard from "../Recipe/RecipeCard/recipecard";
 
 const StyledCategory = styled.div`
 background-color: ${(props) => props.theme.colors.darkGrey};

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import {useActiveRecipeInfoContext} from "../../Context/activeRecipeInfo_context";
+import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
+import {RecipeInfoNav} from "./recipeInfoNav";
 
 const StyledRecipeInfo = styled.div`
   height: 100%; 
@@ -9,9 +10,11 @@ const StyledRecipeInfo = styled.div`
   z-index: 1; 
   top: 0;
   left: 0;
-  background-color: ${(props) => props.theme.colors.lightGrey}; 
-  overflow-x: hidden; 
-  transition: all 2s linear;
+  background-color: ${(props) => props.theme.colors.darkGrey2}; 
+  overflow-x: hidden;
+  border-style: solid;
+  border-color: ${(props) => props.theme.colors.primaryDark};
+  border-width: 10px; 
 `;
 
 const StyledCloseInfoButton = styled.div`
@@ -26,6 +29,7 @@ export default function RecipeInfo(props) {
     const {setShowRecipeInfo} = useActiveRecipeInfoContext();
 
     return <StyledRecipeInfo>
+        <RecipeInfoNav/>
         <StyledCloseInfoButton  onClick={() =>
             setShowRecipeInfo(!setShowRecipeInfo)}>
             Close

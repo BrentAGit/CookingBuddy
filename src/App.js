@@ -5,6 +5,8 @@ import {ThemeProvider} from "emotion-theming";
 import {theme} from "./theme";
 import {ActiveRecipeInfoProvider} from "./Context/activeRecipeInfo_context";
 import {MainPageContent} from "./Components/Main Page Content/mainPageContent"
+import {ActiveRecipeInfoInformationProvider} from "./Context/activeRecipeInfo_Info_context";
+import {ActiveRecipeInfoIngredientsProvider} from "./Context/activeRecipeInfo_Ingredients_context";
 
 function ProvidedApp() {
     return (
@@ -17,11 +19,15 @@ function ProvidedApp() {
 
 function App() {
     return (
-            <ActiveRecipeInfoProvider>
-                <ThemeProvider theme={theme}>
-                    <ProvidedApp/>
-                </ThemeProvider>
-            </ActiveRecipeInfoProvider>
+        <ActiveRecipeInfoIngredientsProvider>
+            <ActiveRecipeInfoInformationProvider>
+                <ActiveRecipeInfoProvider>
+                    <ThemeProvider theme={theme}>
+                        <ProvidedApp/>
+                    </ThemeProvider>
+                </ActiveRecipeInfoProvider>
+            </ActiveRecipeInfoInformationProvider>
+        </ActiveRecipeInfoIngredientsProvider>
     );
 }
 
