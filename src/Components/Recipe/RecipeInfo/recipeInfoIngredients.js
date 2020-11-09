@@ -7,6 +7,7 @@ margin-top: 0;
 
 const StyledList = styled.li`
 padding-top: 25px;
+padding-bottom: 10px;
 list-style-type: none;
 font-size: 1.5em;
 font-family: Sansita Swashed;

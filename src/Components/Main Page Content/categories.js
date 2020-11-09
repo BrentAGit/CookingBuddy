@@ -8,7 +8,8 @@ width: 100%;
 margin-top: 10vh;
 color: ${(props) => props.theme.colors.primaryWhite};
 padding-bottom: 7px;
-border: 5px solid ${(props) => props.theme.colors.primaryDark};
+border-top: 5px solid ${(props) => props.theme.colors.primaryDark};
+border-bottom: 5px solid ${(props) => props.theme.colors.primaryDark};
 `;
 
 const StyledCatTitle = styled.h1`
