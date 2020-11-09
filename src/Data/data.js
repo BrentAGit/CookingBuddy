@@ -3,8 +3,6 @@ const catData = [
         name: "Beef",
         id: 1,
         recipes: [{name: "Steak", description: "A recipe for a juicy, tender, and perfectly cooked steak.", info: "test", ingredients: "testIngred"},
-
-
             {name: "Ribs", description: "Perfectly tender ribs with a marinade of your choice.", info: "test2", ingredients: "testIngred2"},
             {name: "Beef Sandwich", description: "A sandwich made out of juicy beef between two layers of soft bread.", info: "test", ingredients: "testIngred"},
             {name: "Hamburger", description: "A thick, restaurant styled burger with whatever toppings you like.", info: "test", ingredients: "testIngred"}]

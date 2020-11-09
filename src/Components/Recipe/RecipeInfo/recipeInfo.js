@@ -26,12 +26,12 @@ const StyledCloseInfoButton = styled.div`
 
 export default function RecipeInfo(props) {
 
-    const {setShowRecipeInfo} = useActiveRecipeInfoContext();
+    const {showRecipeInfo, setShowRecipeInfo} = useActiveRecipeInfoContext();
 
     return <StyledRecipeInfo>
         <RecipeInfoNav/>
         <StyledCloseInfoButton  onClick={() =>
-            setShowRecipeInfo(!setShowRecipeInfo)}>
+            setShowRecipeInfo(!showRecipeInfo)}>
             Close
             </StyledCloseInfoButton>
     </StyledRecipeInfo>
