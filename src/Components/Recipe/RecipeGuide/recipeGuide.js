@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import {RecipeGuideCloseButton} from "./recipeGuideCloseButton";
+import {RecipeGuideCurrentStep} from "./recipeGuideCurrentStep";
+import {RecipeGuideCurrentMessage} from "./recipeGuideCurrentMessage";
+import {RecipeGuideNextStepButton} from "./recipeGuideNextStepButton";
+import {RecipeGuidePreviousStepButton} from "./recipeGuidePreviousButton";
 
 const StyledRecipeGuide = styled.div`
   height: 50%; 
@@ -13,14 +17,20 @@ const StyledRecipeGuide = styled.div`
   background-color: ${(props) => props.theme.colors.primaryDark3}; 
   overflow-x: hidden;
   transition: height 2s;
-  border-top: 5px solid ${(props) => props.theme.colors.primaryDark};
+  border-top: 10px solid ${(props) => props.theme.colors.primaryDark};
 `;
 
 export function RecipeGuide() {
     return(
         <div>
             <StyledRecipeGuide>
-            <RecipeGuideCloseButton/>
+                <RecipeGuideCloseButton/>
+                <RecipeGuideCurrentStep/>
+                <RecipeGuideCurrentMessage/>
+                <div>
+                    <RecipeGuideNextStepButton/>
+                    <RecipeGuidePreviousStepButton/>
+                </div>
             </StyledRecipeGuide>
         </div>
     )

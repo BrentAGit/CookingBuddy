@@ -12,7 +12,13 @@ const catData = [
                                     "75g / 5 tbsp unsalted butter",
                                     "6 sprigs fresh thyme or 3 sprigs rosemary",
                                     "5 garlic cloves"],
-                    img: "RecipeImage/SteakImage.jpg"},
+                    img: "RecipeImage/SteakImage.jpg",
+                    guide: [ { step: "Step 1", message: "Step 1 test message" },
+                             { step: "Step 2", message: "Step 2 test message" },
+                             { step: "Step 3", message: "Step 3 test message" },
+                             { step: "Step 4", message: "Step 4 test message" },
+                             { step: "Step 5", message: "Step 5 test message" }]
+                    },
 
                     {name: "Ribs",
                     description: "Perfectly tender ribs with a marinade of your choice.",

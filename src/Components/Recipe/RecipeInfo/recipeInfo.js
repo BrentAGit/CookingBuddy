@@ -4,7 +4,7 @@ import {RecipeCloseButton} from "./recipeCloseButton";
 import {RecipeInfoNav} from "./recipeInfoNav";
 import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 import {RecipeStartRecipeButton} from "./recipeInfoStartRecipeButton";
-import {RecipeInfoBody} from "./RecipeInfoBody";
+import {RecipeInfoBody} from "./recipeInfoBody";
 
 const StyledRecipeInfo = styled.div`
   height: 100%; 
