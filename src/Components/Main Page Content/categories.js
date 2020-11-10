@@ -22,7 +22,7 @@ export default function Category(props) {
     const {recipes, name} = props
 
     return (
-        <StyledCategory>
+        <StyledCategory  id={name}>
             <StyledCatTitle>
                 {name}
             </StyledCatTitle>
