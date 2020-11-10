@@ -5,6 +5,7 @@ import {RecipeGuideCurrentStep} from "./recipeGuideCurrentStep";
 import {RecipeGuideCurrentMessage} from "./recipeGuideCurrentMessage";
 import {RecipeGuideNextStepButton} from "./recipeGuideNextStepButton";
 import {RecipeGuidePreviousStepButton} from "./recipeGuidePreviousButton";
+import {useActiveRecipeGuideContext} from "../../../Context/activeRecipeGuide_context";
 
 const StyledRecipeGuide = styled.div`
   height: 50%; 
@@ -21,11 +22,14 @@ const StyledRecipeGuide = styled.div`
 `;
 
 export function RecipeGuide() {
+
+    const {showRecipeGuide} = useActiveRecipeGuideContext();
+
     return(
         <div>
             <StyledRecipeGuide>
                 <RecipeGuideCloseButton/>
-                <RecipeGuideCurrentStep/>
+                <RecipeGuideCurrentStep guide={showRecipeGuide.guide}/>
                 <RecipeGuideCurrentMessage/>
                 <div>
                     <RecipeGuideNextStepButton/>

@@ -4,10 +4,10 @@ import {RecipeInformationImage} from './recipeInformationImage.js'
 import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 
 const StyledInformation = styled.div`
-font-size: 1.5em;
-font-family: Sansita Swashed;
-text-align: center;
-padding-top: 110px;
+  font-size: 1.5em;
+  font-family: Sansita Swashed;
+  text-align: center;
+  padding-top: 110px;
 `
 
 export function RecipeInfoInformation(props)  {

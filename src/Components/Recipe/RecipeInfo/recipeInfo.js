@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "@emotion/styled";
 import {RecipeCloseButton} from "./recipeCloseButton";
 import {RecipeInfoNav} from "./recipeInfoNav";
-import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 import {RecipeStartRecipeButton} from "./recipeInfoStartRecipeButton";
 import {RecipeInfoBody} from "./recipeInfoBody";
 
@@ -19,13 +18,11 @@ const StyledRecipeInfo = styled.div`
   transition: width 2s;
 `;
 
-export default function RecipeInfo() {
-
-    const {showRecipeInfo} = useActiveRecipeInfoContext();
+export function RecipeInfo() {
 
     return(
         <StyledRecipeInfo>
-            <RecipeInfoNav ingredients={showRecipeInfo.ingredients} info={showRecipeInfo.info} img={showRecipeInfo.img}/>
+            <RecipeInfoNav/>
             <RecipeInfoBody/>
             <RecipeCloseButton/>
             <RecipeStartRecipeButton/>

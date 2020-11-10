@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import RecipeInfo from "../RecipeInfo/recipeInfo";
+import {RecipeInfo} from "../RecipeInfo/recipeInfo";
 import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 
 const StyledRecipeDescription = styled.div`
-margin-left: 35px;
+  margin-left: 35px;
 `;
 
 const StyledRecipeButton = styled.div`
-margin-top: 15px;
-font-weight: bold;
-display: table;
+  margin-top: 15px;
+  font-weight: bold;
+  display: table;
 `;
 
 export default function RecipeDesc(props) {

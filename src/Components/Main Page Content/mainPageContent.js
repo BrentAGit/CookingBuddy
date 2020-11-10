@@ -11,7 +11,7 @@ export function MainPageContent() {
 
     return(
         <div>
-            {isGuideActive && <RecipeGuide/>}
+            {isGuideActive && <RecipeGuide guide={showRecipeGuide.guide}/>}
             <div>
                 {catData.map((category, index) =>{
                     return <Category name={category.name} recipes={category.recipes} key={index}/>

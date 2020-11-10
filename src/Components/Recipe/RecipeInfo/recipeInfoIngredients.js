@@ -2,19 +2,19 @@ import React from 'react';
 import styled from "@emotion/styled";
 
 const StyledUnorderedList = styled.ul`
-margin-top: 0;
+  margin-top: 0;
 `
 
 const StyledList = styled.li`
-padding-top: 25px;
-padding-bottom: 10px;
-list-style-type: none;
-font-size: 1.5em;
-font-family: Sansita Swashed;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  list-style-type: none;
+  font-size: 1.5em;
+  font-family: Sansita Swashed;
 `
 
 const StyledDiv = styled.div`
-padding-top: 100px;
+  padding-top: 100px;
 `
 
 const CheckBox = styled('input')`
