@@ -15,9 +15,13 @@ const StyledDiv = styled.div`
 
 export default function RecipeCard(props) {
 
-    const [showRecipe, setShowRecipe] = useState(false)
+    const {recipe} = props;
 
-    const {recipe} = props
+    const [showRecipe, setShowRecipe] = useState(false);
+
+    let favoriteRecipes = JSON.parse(localStorage.getItem("favoriteRecipe")) ?? []; //?? => checks if value is null, if so, returns empty array
+
+    const currentName = favoriteRecipes.includes(recipe.id);
 
     return (
         <StyledDiv>
@@ -25,10 +29,10 @@ export default function RecipeCard(props) {
                 setShowRecipe(!showRecipe)
             }>
                 <StyledRecipeName>
-                    {recipe.name}
+                    {recipe.name + (currentName && " ★" || "")}
                 </StyledRecipeName>
             </div>
-            {showRecipe && <RecipeDesc ingredients={recipe.ingredients} info={recipe.info} img={recipe.img} guide={recipe.guide}>
+            {showRecipe && <RecipeDesc ingredients={recipe.ingredients} info={recipe.info} img={recipe.img} id={recipe.id} guide={recipe.guide}>
                 {recipe.description}
             </RecipeDesc>}
         </StyledDiv>

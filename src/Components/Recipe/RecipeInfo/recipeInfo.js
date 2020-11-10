@@ -4,6 +4,7 @@ import {RecipeCloseButton} from "./recipeCloseButton";
 import {RecipeInfoNav} from "./recipeInfoNav";
 import {RecipeStartRecipeButton} from "./recipeInfoStartRecipeButton";
 import {RecipeInfoBody} from "./recipeInfoBody";
+import {RecipeFavoriteButton} from "./recipeFavoriteButton";
 
 const StyledRecipeInfo = styled.div`
   height: 100%; 
@@ -18,7 +19,9 @@ const StyledRecipeInfo = styled.div`
   transition: width 2s;
 `;
 
-export function RecipeInfo() {
+export function RecipeInfo(props) {
+
+
 
     return(
         <StyledRecipeInfo>
@@ -26,5 +29,6 @@ export function RecipeInfo() {
             <RecipeInfoBody/>
             <RecipeCloseButton/>
             <RecipeStartRecipeButton/>
+            <RecipeFavoriteButton/>
         </StyledRecipeInfo>)
 }

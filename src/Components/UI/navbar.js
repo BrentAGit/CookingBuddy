@@ -26,9 +26,15 @@ export function Navbar() {
      window.onscroll = function() {
         let currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "0";
+            let navBar = document.getElementById("navbar")
+            if (navBar){
+                navBar.style.top = "0"
+            }
         } else {
-            document.getElementById("navbar").style.top = `-${currentScrollPos}px`;
+            let navBar = document.getElementById("navbar")
+            if (navBar){
+                navBar.style.top = `-${currentScrollPos}px`
+            }
         }
         prevScrollpos = currentScrollPos;
     }
@@ -36,7 +42,7 @@ export function Navbar() {
     return (
         <div>
         <StyledNavBar id="navbar" name="top">
-            <StyledA href="#top">Cooking Buddy</StyledA>
+            <StyledA href="/">Cooking Buddy</StyledA>
         </StyledNavBar>
         <SearchCategory categories={catData}/>
         </div>

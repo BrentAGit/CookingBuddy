@@ -23,15 +23,14 @@ const StyledStartRecipeButtonText = styled.div`
   padding-top: 12px;
 `
 
-export function RecipeStartRecipeButton(props) {
+export function RecipeStartRecipeButton() {
 
     const {showRecipeInfo, setShowRecipeInfo} = useActiveRecipeInfoContext();
     const {showRecipeGuide, setShowRecipeGuide} = useActiveRecipeGuideContext();
-    const {guide} = props;
 
     function changeUI(){
         setShowRecipeInfo({...showRecipeInfo, isActive: false});
-        setShowRecipeGuide({...showRecipeGuide, isGuideActive:true, guide:guide});
+        setShowRecipeGuide({isGuideActive:true, guide:showRecipeGuide.guide});
     }
 
     return (

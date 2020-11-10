@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import {RecipeGuideCloseButton} from "./recipeGuideCloseButton";
-import {RecipeGuideCurrentStep} from "./recipeGuideCurrentStep";
+import {RecipeGuideCurrentName} from "./recipeGuideCurrentName";
 import {RecipeGuideCurrentMessage} from "./recipeGuideCurrentMessage";
-import {RecipeGuideNextStepButton} from "./recipeGuideNextStepButton";
-import {RecipeGuidePreviousStepButton} from "./recipeGuidePreviousButton";
-import {useActiveRecipeGuideContext} from "../../../Context/activeRecipeGuide_context";
+
 
 const StyledRecipeGuide = styled.div`
   height: 50%; 
@@ -21,20 +19,18 @@ const StyledRecipeGuide = styled.div`
   border-top: 10px solid ${(props) => props.theme.colors.primaryDark};
 `;
 
-export function RecipeGuide() {
+export function RecipeGuide(props) {
 
-    const {showRecipeGuide} = useActiveRecipeGuideContext();
+    const {guide} = props;
+
+    console.log(guide, "RecipeGuide")
 
     return(
         <div>
             <StyledRecipeGuide>
                 <RecipeGuideCloseButton/>
-                <RecipeGuideCurrentStep guide={showRecipeGuide.guide}/>
-                <RecipeGuideCurrentMessage/>
-                <div>
-                    <RecipeGuideNextStepButton/>
-                    <RecipeGuidePreviousStepButton/>
-                </div>
+                <RecipeGuideCurrentName guide={guide}/>
+                <RecipeGuideCurrentMessage guide={guide}/>
             </StyledRecipeGuide>
         </div>
     )

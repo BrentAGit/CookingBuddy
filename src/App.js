@@ -8,7 +8,11 @@ import {MainPageContent} from "./Components/Main Page Content/mainPageContent";
 import {ActiveRecipeInfoInformationProvider} from "./Context/activeRecipeInfo_Info_context";
 import {ActiveRecipeInfoIngredientsProvider} from "./Context/activeRecipeInfo_Ingredients_context";
 import {ActiveRecipeGuideProvider} from "./Context/activeRecipeGuide_context";
-import {Route, BrowserRouter as Router} from "react-router-dom"
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 
 
 function ProvidedApp() {
@@ -23,19 +27,29 @@ function ProvidedApp() {
 function App() {
     return (
         <Router>
-            <ActiveRecipeGuideProvider>
-                <ActiveRecipeInfoIngredientsProvider>
-                    <ActiveRecipeInfoInformationProvider>
-                        <ActiveRecipeInfoProvider>
-                            <ThemeProvider theme={theme}>
-                                <ProvidedApp/>
-                            </ThemeProvider>
-                        </ActiveRecipeInfoProvider>
-                    </ActiveRecipeInfoInformationProvider>
-                </ActiveRecipeInfoIngredientsProvider>
-            </ActiveRecipeGuideProvider>
+            <Switch>
+                <Route path="/">
+                    <Home/>
+                </Route>
+            </Switch>
         </Router>
     );
+}
+
+function Home() {
+    return(
+        <ActiveRecipeGuideProvider>
+            <ActiveRecipeInfoIngredientsProvider>
+                <ActiveRecipeInfoInformationProvider>
+                    <ActiveRecipeInfoProvider>
+                        <ThemeProvider theme={theme}>
+                            <ProvidedApp/>
+                        </ThemeProvider>
+                    </ActiveRecipeInfoProvider>
+                </ActiveRecipeInfoInformationProvider>
+            </ActiveRecipeInfoIngredientsProvider>
+        </ActiveRecipeGuideProvider>
+    )
 }
 
 export default App;

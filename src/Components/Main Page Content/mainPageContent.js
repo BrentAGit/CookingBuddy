@@ -9,6 +9,7 @@ export function MainPageContent() {
     const {showRecipeGuide} = useActiveRecipeGuideContext();
     const {isGuideActive} = showRecipeGuide;
 
+    console.log(showRecipeGuide, "klsfsdkl")
     return(
         <div>
             {isGuideActive && <RecipeGuide guide={showRecipeGuide.guide}/>}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "@emotion/styled";
-import {useActiveRecipeGuideContext} from "../../../Context/activeRecipeGuide_context";
+import {ActiveRecipeGuideProvider} from "../../../Context/activeRecipeGuide_context";
 
 const StyledCurrentStep = styled.div`
   text-align: center;
@@ -11,17 +11,13 @@ const StyledCurrentStep = styled.div`
   font-family: Sansita Swashed;
 `
 
-export function RecipeGuideCurrentStep(props) {
+export function RecipeGuideCurrentName(props) {
 
-    const {showRecipeGuide} = useActiveRecipeGuideContext();
     const {guide} = props;
-    console.log(guide)
-    console.log(showRecipeGuide.guide)
-    console.log(props)
 
     return (
         <StyledCurrentStep>
-            {guide}
+            {guide.recipeName}
         </StyledCurrentStep>
     )
 }

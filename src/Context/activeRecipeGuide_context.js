@@ -3,7 +3,7 @@ import React, {createContext, useContext, useMemo, useState} from "react";
 const ActiveRecipeGuideContext = createContext();
 
 export function ActiveRecipeGuideProvider(props) {
-    const [showRecipeGuide, setShowRecipeGuide] = useState(false)
+    const [showRecipeGuide, setShowRecipeGuide] = useState({isGuideActive: false, guide:[]})
 
     const api = useMemo(() => ({
             showRecipeGuide,

@@ -21,6 +21,8 @@ const CheckBox = styled('input')`
   transform: scale(1);
   margin-left: -15px;
   margin-right: 15px;
+  width:20px;
+  height:20px;
  `
 
 export function RecipeInfoIngredients(props)  {
