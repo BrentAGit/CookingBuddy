@@ -22,7 +22,7 @@ const StyledA = styled.a`
 `;
 
 export function Navbar() {
-    let prevScrollpos = window.pageYOffset; // Make navbar retract when scrolling down
+    let prevScrollpos = window.pageYOffset; // Make navbar retract when scrolling down | found on internet
      window.onscroll = function() {
         let currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {

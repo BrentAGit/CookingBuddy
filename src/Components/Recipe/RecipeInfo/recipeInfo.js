@@ -4,6 +4,7 @@ import {RecipeCloseButton} from "./recipeCloseButton";
 import {RecipeInfoNav} from "./recipeInfoNav";
 import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 import {RecipeStartRecipeButton} from "./recipeInfoStartRecipeButton";
+import {RecipeInfoBody} from "./RecipeInfoBody";
 
 const StyledRecipeInfo = styled.div`
   height: 100%; 
@@ -25,6 +26,7 @@ export default function RecipeInfo() {
     return(
         <StyledRecipeInfo>
             <RecipeInfoNav ingredients={showRecipeInfo.ingredients} info={showRecipeInfo.info} img={showRecipeInfo.img}/>
+            <RecipeInfoBody/>
             <RecipeCloseButton/>
             <RecipeStartRecipeButton/>
         </StyledRecipeInfo>)

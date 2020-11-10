@@ -2,9 +2,6 @@ import React from 'react';
 import styled from "@emotion/styled";
 import {useActiveRecipeInfoInformationContext} from "../../../Context/activeRecipeInfo_Info_context";
 import {useActiveRecipeInfoIngredientsContext} from "../../../Context/activeRecipeInfo_Ingredients_context";
-import {RecipeInfoInformation} from "./recipeInfoInformation";
-import {RecipeInfoIngredients} from "./recipeInfoIngredients";
-import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
 
 const StyledInfoNavBar = styled.div`
 background-color:  ${(props) => props.theme.colors.darkGrey};
@@ -35,32 +32,29 @@ export function RecipeInfoNav() {
 
     const {showRecipeInfoInformation, setShowRecipeInfoInformation} = useActiveRecipeInfoInformationContext();
     const {showRecipeInfoIngredients, setShowRecipeInfoIngredients} = useActiveRecipeInfoIngredientsContext();
-    const {showRecipeInfo} = useActiveRecipeInfoContext();
 
-    return(
+    return (
         <div>
-        <StyledInfoNavBar onClick={() => {
-            if(showRecipeInfoIngredients) {
-                setShowRecipeInfoInformation(!showRecipeInfoInformation)
-                setShowRecipeInfoIngredients(!showRecipeInfoIngredients)
-            }
-        }}>
+            <StyledInfoNavBar onClick={() => {
+                if (showRecipeInfoIngredients) {
+                    setShowRecipeInfoInformation(!showRecipeInfoInformation)
+                    setShowRecipeInfoIngredients(!showRecipeInfoIngredients)
+                }
+            }}>
                 <StyledNavCatText>
                     Info
                 </StyledNavCatText>
-        </StyledInfoNavBar>
-        <StyledInfoNavBar onClick={() => {
-            if(showRecipeInfoInformation) {
-                setShowRecipeInfoInformation(!showRecipeInfoInformation)
-                setShowRecipeInfoIngredients(!showRecipeInfoIngredients)
-            }
-        }}>
-            <StyledNavCatText>
-                Ingredients
-            </StyledNavCatText>
-        </StyledInfoNavBar>
-            {showRecipeInfoInformation && <RecipeInfoInformation info={showRecipeInfo.info} img={showRecipeInfo.img}/>}
-            {showRecipeInfoIngredients && <RecipeInfoIngredients ingredients={showRecipeInfo.ingredients}/>}
+            </StyledInfoNavBar>
+            <StyledInfoNavBar onClick={() => {
+                if (showRecipeInfoInformation) {
+                    setShowRecipeInfoInformation(!showRecipeInfoInformation)
+                    setShowRecipeInfoIngredients(!showRecipeInfoIngredients)
+                }
+            }}>
+                <StyledNavCatText>
+                    Ingredients
+                </StyledNavCatText>
+            </StyledInfoNavBar>
         </div>
     )
 }
