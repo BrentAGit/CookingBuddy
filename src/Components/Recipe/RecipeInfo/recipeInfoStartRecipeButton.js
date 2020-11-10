@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from "@emotion/styled";
 import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
+import {useActiveRecipeGuideContext} from "../../../Context/activeRecipeGuide_context";
 
-const StyledCloseInfoButton = styled.div`
+const StyledStartRecipeButton = styled.div`
   margin-top: 15px;
   background-color: ${(props) => props.theme.colors.darkGrey};
   display: table;
@@ -16,7 +17,7 @@ const StyledCloseInfoButton = styled.div`
         background-color: ${(props) => props.theme.colors.primaryDark2};
 `
 
-const StyledCloseInfoButtonText = styled.div`
+const StyledStartRecipeButtonText = styled.div`
   text-align: center;
   font-weight: bold;
   padding-top: 12px;
@@ -25,15 +26,20 @@ const StyledCloseInfoButtonText = styled.div`
 export function RecipeStartRecipeButton() {
 
     const {showRecipeInfo, setShowRecipeInfo} = useActiveRecipeInfoContext();
+    const {showRecipeGuide, setShowRecipeGuide} = useActiveRecipeGuideContext();
+
+    function changeUI(){
+        setShowRecipeInfo({...showRecipeInfo, isActive: false});
+        setShowRecipeGuide({...showRecipeGuide, isGuideActive:true});
+    }
 
     return (
         <div>
-            <StyledCloseInfoButton  onClick={() =>
-                setShowRecipeInfo({...showRecipeInfo, isActive: false})}>
-                <StyledCloseInfoButtonText>
+            <StyledStartRecipeButton  onClick={() => changeUI()}>
+                <StyledStartRecipeButtonText>
                     Start Recipe
-                </StyledCloseInfoButtonText>
-            </StyledCloseInfoButton>
+                </StyledStartRecipeButtonText>
+            </StyledStartRecipeButton>
         </div>
     )
 }
