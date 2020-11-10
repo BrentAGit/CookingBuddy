@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import {RecipeCloseButton} from "./recipeCloseButton";
 import {RecipeInfoNav} from "./recipeInfoNav";
 import {useActiveRecipeInfoContext} from "../../../Context/activeRecipeInfo_context";
+import {RecipeStartRecipeButton} from "./recipeInfoStartRecipeButton";
 
 const StyledRecipeInfo = styled.div`
   height: 100%; 
@@ -11,7 +12,7 @@ const StyledRecipeInfo = styled.div`
   z-index: 1; 
   top: 0;
   left: 0;
-  background-color: ${(props) => props.theme.colors.darkGrey2}; 
+  background-color: ${(props) => props.theme.colors.primaryDark3}; 
   overflow-x: hidden;
   border-right: 10px solid ${(props) => props.theme.colors.primaryDark};
   transition: width 2s;
@@ -25,5 +26,6 @@ export default function RecipeInfo() {
         <StyledRecipeInfo>
             <RecipeInfoNav ingredients={showRecipeInfo.ingredients} info={showRecipeInfo.info} img={showRecipeInfo.img}/>
             <RecipeCloseButton/>
+            <RecipeStartRecipeButton/>
         </StyledRecipeInfo>)
 }
