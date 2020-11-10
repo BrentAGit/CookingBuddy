@@ -23,8 +23,6 @@ export function RecipeGuide(props) {
 
     const {guide} = props;
 
-    console.log(guide, "RecipeGuide")
-
     return(
         <div>
             <StyledRecipeGuide>

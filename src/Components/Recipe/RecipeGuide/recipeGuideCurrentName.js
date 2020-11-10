@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from "@emotion/styled";
-import {ActiveRecipeGuideProvider} from "../../../Context/activeRecipeGuide_context";
 
 const StyledCurrentStep = styled.div`
   text-align: center;
