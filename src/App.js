@@ -8,6 +8,8 @@ import {MainPageContent} from "./Components/Main Page Content/mainPageContent";
 import {ActiveRecipeInfoInformationProvider} from "./Context/activeRecipeInfo_Info_context";
 import {ActiveRecipeInfoIngredientsProvider} from "./Context/activeRecipeInfo_Ingredients_context";
 import {ActiveRecipeGuideProvider} from "./Context/activeRecipeGuide_context";
+import './Services/firestore';
+
 import {
     BrowserRouter as Router,
     Switch,
